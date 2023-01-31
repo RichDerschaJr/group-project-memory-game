@@ -14,8 +14,10 @@ const softBtn = document.querySelector(".soft-button");
 const hardBtn = document.querySelector(".hard-button");
 const difficultyBtns = document.querySelector(".difficulty-buttons");
 const main = document.querySelector("main");
+const cardContainer = document.querySelector(".card-container");
 const hardContainer = document.querySelector(".hard-container");
 const softContainer = document.querySelector(".soft-container");
+let flippedCards = [];
 const softCards = [
   {
     type: "tama-1",
@@ -115,25 +117,40 @@ const hardCards = [
     type: "sigil-8",
     url: "assets/hard-card-8.jpg",
   },
-  {
-    type: "sigil-8",
-    url: "assets/hard-card-8.jpg",
-  },
-  {
-    type: "hard-back",
-    url: "assets/hard-card-back.jpg",
-  },
 ];
 
+const shuffle = (array) => {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+};
+
 const makeBoard = (deck, where) => {
+  shuffle(deck);
   deck.forEach((item) => {
     const flipCard = document.createElement("li");
     flipCard.classList.add("flip-card");
     const flipCardInner = document.createElement("div");
     flipCardInner.classList.add("flip-card-inner");
+    flipCardInner.setAttribute("data-type", item.type);
     const flipCardFront = document.createElement("div");
     flipCardFront.classList.add("flip-card-front");
     const frontImage = document.createElement("img");
+    frontImage.classList.add("front-image");
     if (where === "soft") {
       frontImage.src = "assets/tama-card-off.png";
     } else {
@@ -154,4 +171,30 @@ const makeBoard = (deck, where) => {
     }
   });
 };
-makeBoard(softCards, "soft");
+
+cardContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("front-image") && flippedCards.length < 2) {
+    e.target.parentNode.parentNode.classList.add("flip");
+    flippedCards.push(e.target.parentNode.parentNode);
+    console.dir(flippedCards);
+
+    if (flippedCards.length === 2) {
+      if (
+        flippedCards[0].getAttribute("data-type") ===
+        flippedCards[1].getAttribute("data-type")
+      ) {
+        setTimeout(() => {
+          flippedCards[0].classList.add("hide");
+          flippedCards[1].classList.add("hide");
+          flippedCards = [];
+        }, 1500);
+      } else {
+        setTimeout(() => {
+          flippedCards[0].classList.remove("flip");
+          flippedCards[1].classList.remove("flip");
+          flippedCards = [];
+        }, 1500);
+      }
+    }
+  }
+});
