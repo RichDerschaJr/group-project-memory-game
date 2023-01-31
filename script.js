@@ -41,7 +41,6 @@ const softCards = [
     type: "tama-3",
     url: "assets/tama-card-3.png",
   },
-
   {
     type: "tama-4",
     url: "assets/tama-card-4.png",
@@ -50,10 +49,6 @@ const softCards = [
     type: "tama-4",
     url: "assets/tama-card-4.png",
   },
-  // {
-  //   type: "tama-off",
-  //   url: "assets/tama-card-off",
-  // },
 ];
 const hardCards = [
   {
@@ -129,3 +124,7 @@ const hardCards = [
     url: "assets/hard-card-back.jpg",
   },
 ];
+
+const makeBoard = () => {
+  softCard;
+};
