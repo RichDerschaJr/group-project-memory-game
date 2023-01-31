@@ -1,12 +1,12 @@
 // CODE FOR TIMER
-let header = document.querySelector(header);
-setInterval(() => {
-  const date = new Date();
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
-  header.textContent = `${hours}:${minutes}:${seconds}`;
-}, 1000);
+// let header = document.querySelector(header);
+// setInterval(() => {
+//   const date = new Date();
+//   const hours = date.getHours();
+//   const minutes = date.getMinutes();
+//   const seconds = date.getSeconds();
+//   header.textContent = `${hours}:${minutes}:${seconds}`;
+// }, 1000);
 
 // CODE FOR GAME
 
@@ -125,6 +125,33 @@ const hardCards = [
   },
 ];
 
-const makeBoard = () => {
-  softCard;
+const makeBoard = (deck, where) => {
+  deck.forEach((item) => {
+    const flipCard = document.createElement("li");
+    flipCard.classList.add("flip-card");
+    const flipCardInner = document.createElement("div");
+    flipCardInner.classList.add("flip-card-inner");
+    const flipCardFront = document.createElement("div");
+    flipCardFront.classList.add("flip-card-front");
+    const frontImage = document.createElement("img");
+    if (where === "soft") {
+      frontImage.src = "assets/tama-card-off.png";
+    } else {
+      frontImage.src = "assets/hard-card-back.jpg";
+    }
+    const flipCardBack = document.createElement("div");
+    flipCardBack.classList.add("flip-card-back");
+    const backImage = document.createElement("img");
+    backImage.src = item.url;
+    flipCardBack.append(backImage);
+    flipCardFront.append(frontImage);
+    flipCardInner.append(flipCardFront, flipCardBack);
+    flipCard.append(flipCardInner);
+    if (where === "soft") {
+      softContainer.append(flipCard);
+    } else {
+      hardContainer.append(flipCard);
+    }
+  });
 };
+makeBoard(softCards, "soft");
