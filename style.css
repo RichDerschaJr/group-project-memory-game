@@ -1,91 +1,60 @@
-@media only screen {
-  min-width: 768px;
+body,
+p {
+  margin: 0;
+}
 
-  body {
-    background-color: linear-gradient(to right, purple, rgb(133, 72, 133));
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
 
-  /* TIMER CODE */
-  #timer {
-    font-size: 30px;
-    font-weight: bold;
-    color: red;
-  }
-  /* CARD CODE */
-  /* Overall container for the game board */
-  #game-board {
-    display: flex; /* Use flexbox layout for the game board */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    width: 700px; /* Set the width of the game board */
-    height: 700px; /* Set the height of the game board */
-    margin: 0 auto; /* Center the game board on the page */
-  }
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 315px;
+  height: 315px;
+  background: #e8dada;
+  border: 3px solid #000000;
 
-  /* Individual card styling */
-  .card {
-    width: 90px; /* Set the width of each card */
-    height: 90px; /* Set the height of each card */
-    background-color: greenyellow; /* Set the default background color of each card */
-    border: 1px solid lightblue; /* Add a border around each card */
-    margin: 5px; /* Add some margin between each card */
-    position: relative; /* Allow for absolute positioning of elements within the card */
-  }
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 25px;
+}
 
-  /* Show the back of the card when it's flipped over */
-  .card.flipped {
-    background-color: azure; /* Change the background color to indicate the card is flipped */
-  }
+.extreme-logo {
+  height: 40px;
+}
 
-  /* Show the front of the card when it's flipped over */
-  .card.flipped .card-front {
-    display: none; /* Hide the back of the card */
-  }
+.logo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-  /* Show the back of the card when it's flipped over */
-  .card.flipped .card-back {
-    display: block; /* Show the front of the card */
-  }
+.game {
+  text-align: center;
+}
 
-  /* Style for the front of the card */
-  .card-front {
-    width: 100%; /* Make the front of the card the same size as the card */
-    height: 100%; /* Make the front of the card the same size as the card */
-    background-repeat: no-repeat; /* Don't repeat the background image */
-    background-position: center; /* Center the background image */
-    background-size: cover; /* Scale the background image to fill the card */
-    position: absolute; /* Position the front of the card absolutely within the card */
-    top: 0; /* Position the front of the card at the top of the card */
-    left: 0; /* Position the front of the card at the left of the card */
-  }
+.difficulty-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 110%;
+}
 
-  /* Style for the back of the card */
-  .card-back {
-    width: 100%; /* Make the back of the card the same size as the card */
-    height: 100%; /* Make the back of the card the same size as the card */
-    background-color: green; /* Use the same background color as the card */
-    display: none; /* Hide the back of the card by default */
-    position: absolute; /* Position the back of the card absolutely within the card */
-    top: 0; /* Position the back of the card at the top of the card */
-    left: 0; /* Position the back of the card at the left of the card */
-  }
+li {
+  list-style: none;
+}
+.soft-container {
+  visibility: hidden;
+}
+.hard-container {
+  visibility: hidden;
+}
 
-  /* Style for the start button */
-  #start-button {
-    margin: 10px auto; /* Center the start button on the page */
-    padding: 10px 20px; /* Add some padding to the start button */
-    background-color: #4caf50; /* Use a green background color for the start button */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #reset-button {
-    margin: 10px auto; /* Center the start button on the page */
-    padding: 10px 20px; /* Add some padding to the start button */
-    background-color: red; /* Use a green background color for the start button */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.hide {
+  visibility: hidden;
 }
