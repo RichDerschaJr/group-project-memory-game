@@ -1,15 +1,7 @@
 // CODE FOR TIMER
-// let header = document.querySelector(header);
-// setInterval(() => {
-//   const date = new Date();
-//   const hours = date.getHours();
-//   const minutes = date.getMinutes();
-//   const seconds = date.getSeconds();
-//   header.textContent = `${hours}:${minutes}:${seconds}`;
-// }, 1000);
 
 // CODE FOR GAME
-
+const homepage = document.querySelector(".homepage");
 const softBtn = document.querySelector(".soft-button");
 const hardBtn = document.querySelector(".hard-button");
 const difficultyBtns = document.querySelector(".difficulty-buttons");
@@ -140,7 +132,19 @@ const shuffle = (array) => {
 };
 
 const makeBoard = (deck, where) => {
+  var countDownDuration = 300;
+  var x = setInterval(function () {
+    countDownDuration--;
+    var minutes = Math.floor(countDownDuration / 60);
+    var seconds = countDownDuration % 60;
+    document.getElementById("timer").innerHTML = minutes + " m" + seconds + "s";
+    if (countDownDuration < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "TIMES UP!";
+    }
+  }, 1000);
   shuffle(deck);
+  homepage.classList.add("hide");
   deck.forEach((item) => {
     const flipCard = document.createElement("li");
     flipCard.classList.add("flip-card");
@@ -197,4 +201,11 @@ cardContainer.addEventListener("click", (e) => {
       }
     }
   }
+});
+
+softBtn.addEventListener("click", () => {
+  makeBoard(softCards, "soft");
+});
+hardBtn.addEventListener("click", () => {
+  makeBoard(hardCards, "hard");
 });
