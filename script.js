@@ -23,7 +23,7 @@ const softCards = [
   },
   {
     type: "tama-1",
-    url: "assets/tama-card-1-2.png",
+    url: "assets/tama-card-1.png",
   },
   {
     type: "tama-2",
@@ -31,7 +31,7 @@ const softCards = [
   },
   {
     type: "tama-2",
-    url: "assets/tama-card-2-2.png",
+    url: "assets/tama-card-2.png",
   },
   {
     type: "tama-3",
@@ -39,7 +39,7 @@ const softCards = [
   },
   {
     type: "tama-3",
-    url: "assets/tama-card-3-2.png",
+    url: "assets/tama-card-3.png",
   },
 
   {
@@ -48,7 +48,7 @@ const softCards = [
   },
   {
     type: "tama-4",
-    url: "assets/tama-card-4-2.png",
+    url: "assets/tama-card-4.png",
   },
   // {
   //   type: "tama-off",
@@ -62,7 +62,7 @@ const hardCards = [
   },
   {
     type: "sigil-1",
-    url: "assets/hard-card-1-2.jpg",
+    url: "assets/hard-card-1.jpg",
   },
   {
     type: "sigil-2",
@@ -70,7 +70,7 @@ const hardCards = [
   },
   {
     type: "sigil-2",
-    url: "assets/hard-card-2-2.jpg",
+    url: "assets/hard-card-2.jpg",
   },
   {
     type: "sigil-3",
@@ -78,7 +78,7 @@ const hardCards = [
   },
   {
     type: "sigil-3",
-    url: "assets/hard-card-3-2.jpg",
+    url: "assets/hard-card-3.jpg",
   },
   {
     type: "sigil-4",
@@ -86,7 +86,7 @@ const hardCards = [
   },
   {
     type: "sigil-4",
-    url: "assets/hard-card-4-2.jpg",
+    url: "assets/hard-card-4.jpg",
   },
   {
     type: "sigil-5",
@@ -94,7 +94,7 @@ const hardCards = [
   },
   {
     type: "sigil-5",
-    url: "assets/hard-card-5-2.jpg",
+    url: "assets/hard-card-5.jpg",
   },
   {
     type: "sigil-6",
@@ -102,7 +102,7 @@ const hardCards = [
   },
   {
     type: "sigil-6",
-    url: "assets/hard-card-6-2.jpg",
+    url: "assets/hard-card-6.jpg",
   },
   {
     type: "sigil-7",
@@ -110,7 +110,7 @@ const hardCards = [
   },
   {
     type: "sigil-7",
-    url: "assets/hard-card-7-2.jpg",
+    url: "assets/hard-card-7.jpg",
   },
   {
     type: "sigil-8",
@@ -118,11 +118,11 @@ const hardCards = [
   },
   {
     type: "sigil-8",
-    url: "assets/hard-card-8-2.jpg",
+    url: "assets/hard-card-8.jpg",
   },
   {
     type: "sigil-8",
-    url: "assets/hard-card-8-2.jpg",
+    url: "assets/hard-card-8.jpg",
   },
   {
     type: "hard-back",
