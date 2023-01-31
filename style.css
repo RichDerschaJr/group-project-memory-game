@@ -108,6 +108,10 @@ li {
   transform: rotateY(180deg);
 }
 
+.timer {
+  width: 50%;
+}
+
 .hide {
   display: none;
 }
