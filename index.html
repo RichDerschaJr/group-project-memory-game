@@ -7,43 +7,32 @@
     <link rel="stylesheet" href="style.css" />
     <title>Extreme Memory Game</title>
   </head>
-  
-    <a href="Soft">SOFT</a>
-    <p>EXTREME MEMORY GAME</p>
-    <a href="Hard">HARD</a>
-    <!-- WORK IN PROGESS START -->
-    <!-- ALSO THIS IS THE GAME AND NOT THE STARTER PAGE -->
-    <div id="timer"></div>
-    <div class="container">
-      <ul class="cards">
-        <li class="card">
-
-          <div class="card" id="card-1">A</div>
+  <body>
+    <header>
+      <p class="counter"></p>
+    </header>
+    <main>
+      <div class="logo-container">
+        <img class="extreme-logo" src="assets/extreme-logo.png" />
+        <p class="game">GAME</p>
+      </div>
+      <div class="difficulty-buttons">
+        <button class="soft-button">Soft</button>
+        <button class="hard-button">Hard</button>
+      </div>
+    </main>
+    <div>
+      <ul class="hard-container">
+        <li class="hard-cards">
+          <div class="hard-card-1" id="hard-card-1"></div>
         </li>
       </ul>
-      <!-- <div id="game-board">
-      <div class="card" id="card-2">B</div>
-      <div class="card" id="card-3">C</div>
-      <div class="card" id="card-4">D</div>
-      <div class="card" id="card-5">E</div>
-      <div class="card" id="card-6">F</div>
-      <div class="card" id="card-7">G</div>
-      <div class="card" id="card-8">H</div>
-      <div class="card" id="card-9">I</div>
-      <div class="card" id="card-10">J</div>
-      <div class="card" id="card-11">K</div>
-      <div class="card" id="card-12">L</div>
-      <div class="card" id="card-13">M</div>
-      <div class="card" id="card-14">N</div>
-      <div class="card" id="card-15">O</div> -->
-
-      <!-- Add more cards as needed -->
+      <ul class="soft-container">
+        <li class="soft-cards">
+          <div class="soft-card-1" id="soft-card-1"></div>
+        </li>
+      </ul>
     </div>
-    <button id="start-button">Start</button>
-    <button id="reset-button">Reset</button>
-    <div id="timer"></div>
-
-    <!-- WORK IN PROGRESS FINISH -->
     <script src="script.js"></script>
   </body>
 </html>
