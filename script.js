@@ -1,4 +1,7 @@
-// CODE FOR TIMER
+// CODE FOR REFRESH BUTTON
+
+const refreshButton = document.querySelector(".refresh");
+refreshButton.addEventListener("click", () => location.reload());
 
 // CODE FOR GAME
 const homepage = document.querySelector(".homepage");
@@ -207,7 +210,9 @@ cardContainer.addEventListener("click", (e) => {
 
 softBtn.addEventListener("click", () => {
   makeBoard(softCards, "soft");
+  refreshButton.classList.remove("hide");
 });
 hardBtn.addEventListener("click", () => {
   makeBoard(hardCards, "hard");
+  refreshButton.classList.remove("hide");
 });
