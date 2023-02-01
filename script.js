@@ -165,6 +165,7 @@ const makeBoard = (deck, where) => {
     const backImage = document.createElement("img");
     backImage.src = item.url;
     flipCardBack.append(backImage);
+    // flipCardBack.style.backgroundImage = `url(${item.url})`;
     flipCardFront.append(frontImage);
     flipCardInner.append(flipCardFront, flipCardBack);
     flipCard.append(flipCardInner);
@@ -177,6 +178,7 @@ const makeBoard = (deck, where) => {
 };
 
 cardContainer.addEventListener("click", (e) => {
+  console.dir(e.target);
   if (e.target.classList.contains("front-image") && flippedCards.length < 2) {
     e.target.parentNode.parentNode.classList.add("flip");
     flippedCards.push(e.target.parentNode.parentNode);
