@@ -11,12 +11,15 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  background-color: lightyellow !important;
 }
 
 .extreme-logo {
   height: 40px;
 }
-
+.refresh {
+  width: 50px;
+}
 .logo-container {
   display: flex;
   justify-content: center;
@@ -67,13 +70,21 @@ li {
 
 .soft-container {
   margin: 0 10%;
+  background-image: url("assets/pink-fluffy-clouds.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
 }
-
+.hard-container {
+  background-image: url("assets/fire-background-new.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
   width: 50%;
-  height: 120px;
+  height: 200px;
   /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -131,6 +142,5 @@ li {
 @media only screen and (min-width: 500px) {
   .flip-card {
     max-width: 25%;
-    height: 400px;
   }
 }
