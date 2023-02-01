@@ -11,7 +11,22 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-color: lightyellow !important;
+  background-image: url(assets/cloud-fire-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#timer {
+  margin: 10px;
+  color: black;
+  background:
+  border: 3px solid white;
+  padding: 5px;
+  font-size: 34px;
+  -webkit-text-stroke: 1px rgb(49, 46, 46);
+  -webkit-text-fill-color: white;
+  font-family: "Nunito", sans-serif;
 }
 
 .extreme-logo {
@@ -61,7 +76,8 @@ ul img {
 .card-container ul {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 li {
@@ -129,10 +145,6 @@ li {
   /* background-color: dodgerblue; */
   color: white;
   transform: rotateY(180deg);
-}
-
-.timer {
-  width: 50%;
 }
 
 .hide {
