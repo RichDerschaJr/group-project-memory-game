@@ -5,8 +5,8 @@ refreshButton.addEventListener("click", () => location.reload());
 
 // CODE FOR GAME
 const homepage = document.querySelector(".homepage");
-const softBtn = document.querySelector(".soft-button");
-const hardBtn = document.querySelector(".hard-button");
+const softBtn = document.querySelector(".button-one");
+const hardBtn = document.querySelector(".button-two");
 const difficultyBtns = document.querySelector(".difficulty-buttons");
 const main = document.querySelector("main");
 const cardContainer = document.querySelector(".card-container");
@@ -161,7 +161,7 @@ const makeBoard = (deck, where) => {
     if (where === "soft") {
       frontImage.src = "assets/tama-card-off.png";
     } else {
-      frontImage.src = "assets/hard-card-back.jpg";
+      frontImage.src = "assets/hard-card-back.png";
     }
     const flipCardBack = document.createElement("div");
     flipCardBack.classList.add("flip-card-back");
@@ -179,7 +179,6 @@ const makeBoard = (deck, where) => {
     }
   });
 };
-
 cardContainer.addEventListener("click", (e) => {
   console.dir(e.target);
   if (e.target.classList.contains("front-image") && flippedCards.length < 2) {
